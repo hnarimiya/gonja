@@ -885,7 +885,7 @@ func filterSort(e *exec.Evaluator, in *exec.Value, params *exec.VarArgs) *exec.V
 	// "attribute" is not implements,but it is in the signature
 	p := params.Expect(0, []*exec.KwArg{{"reverse", false}, {"case_sensitive", false}, {"attribute", nil}})
 	if p.IsError() {
-		return exec.AsValue(errors.Wrap(p, "Wrong signature for 'sort'"))
+		return exec.AsValue(errors.Wrap(p, "Wrong hoge signature for 'sort'"))
 	}
 	reverse := p.KwArgs["reverse"].Bool()
 	caseSensitive := p.KwArgs["case_sensitive"].Bool()
