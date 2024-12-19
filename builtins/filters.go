@@ -882,7 +882,8 @@ func filterSlice(e *exec.Evaluator, in *exec.Value, params *exec.VarArgs) *exec.
 }
 
 func filterSort(e *exec.Evaluator, in *exec.Value, params *exec.VarArgs) *exec.Value {
-	p := params.Expect(0, []*exec.KwArg{{"reverse", false}, {"case_sensitive", false}})
+	// "attribute" is not implements,but it is in the signature
+	p := params.Expect(0, []*exec.KwArg{{"reverse", false}, {"case_sensitive", false}, {"attribute", nil}})
 	if p.IsError() {
 		return exec.AsValue(errors.Wrap(p, "Wrong signature for 'sort'"))
 	}
