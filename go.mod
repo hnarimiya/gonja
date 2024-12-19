@@ -1,4 +1,4 @@
-module github.com/noirbizarre/gonja
+module github.com/hnarimiya/gonja
 
 go 1.14
 
